@@ -1,0 +1,78 @@
+services:
+
+  chorvoq_gis_backend:
+    depends_on:
+      - geoserver
+      - chorvoq-postgis
+    container_name: chorvoq_gis_backend
+    restart: always
+    build:
+      context: .
+    ports:
+      - "2000:8080"
+    networks:
+      - chorvoq_gis_network
+      - gis-network
+    environment:
+      - "spring.datasource.url=jdbc:postgresql://chorvoq-postgis:5432/gis_data"
+      - "geoserver.uri=http://geoserver:8080/geoserver"
+      - "wmts.key=YndaaNtjeqW24IgrfR8w"
+
+  chorvoq_gis_pgadmin:
+    depends_on:
+      - chorvoq-postgis
+    image: dpage/pgadmin4
+    container_name: chorvoq_gis_pgadmin
+    restart: always
+    ports:
+      - "2001:80"
+    networks:
+      - gis-network
+    environment:
+      PGADMIN_DEFAULT_EMAIL: erkinovmuhammadayubps@gmail.com
+      PGADMIN_DEFAULT_PASSWORD: Qazxswe123
+    volumes:
+      - chorvoq_gis_pgadmin_data:/var/lib/pgadmin
+
+  geoserver:
+    container_name: geoserver
+    restart: always
+    image: docker.osgeo.org/geoserver:2.25.4
+    ports:
+      - "2002:8080"
+    networks:
+      - gis-network
+    volumes:
+      - geoserver_volume:/opt/geoserver_data/
+    environment:
+      - CORS_ENABLED=true
+
+
+  chorvoq-postgis:
+    image: postgis/postgis:15-3.3
+    container_name: chorvoq-postgis
+    restart: always
+    environment:
+      POSTGRES_USER: erkinovmuhammadayubps@gmail.com
+      POSTGRES_PASSWORD: Qazxswe123$$
+      POSTGRES_DB: gis_data
+    networks:
+      - gis-network
+    volumes:
+      - postgis_data:/var/lib/postgresql/data
+
+
+volumes:
+  geoserver_volume:
+  chorvoq_gis_postgres_data:
+  chorvoq_gis_pgadmin_data:
+  postgis_data:
+    name: geoserver_postgis_data
+
+
+networks:
+  chorvoq_gis_network:
+    driver: bridge
+  gis-network:
+    driver: bridge
+    name: geoserver_gis-network
