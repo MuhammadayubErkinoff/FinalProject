@@ -1,12 +1,12 @@
-package com.example.chorvoqgisbackend.service.user;
+package com.example.finalproject.service.user;
 
-import com.example.chorvoqgisbackend.config.db.SoftDeleteAspect;
-import com.example.chorvoqgisbackend.models.dto.Batch;
-import com.example.chorvoqgisbackend.models.dto.user.RoleDto;
-import com.example.chorvoqgisbackend.models.user.Action;
-import com.example.chorvoqgisbackend.models.user.Role;
-import com.example.chorvoqgisbackend.repositories.user.RoleRepo;
-import com.example.chorvoqgisbackend.repositories.user.UserRepo;
+import com.example.finalproject.config.db.SoftDeleteAspect;
+import com.example.finalproject.models.dto.Batch;
+import com.example.finalproject.models.dto.user.RoleDto;
+import com.example.finalproject.models.user.Action;
+import com.example.finalproject.models.user.Role;
+import com.example.finalproject.repositories.user.RoleRepo;
+import com.example.finalproject.repositories.user.UserRepo;
 import jakarta.persistence.EntityManager;
 import org.hibernate.Session;
 import org.springframework.beans.factory.annotation.Autowired;

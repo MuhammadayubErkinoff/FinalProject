@@ -1,6 +1,6 @@
-package com.example.chorvoqgisbackend.models.user;
+package com.example.finalproject.models.user;
 
-import com.example.chorvoqgisbackend.models.BaseModel;
+import com.example.finalproject.models.BaseModel;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;

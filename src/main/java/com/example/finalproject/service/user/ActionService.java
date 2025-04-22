@@ -1,9 +1,9 @@
-package com.example.chorvoqgisbackend.service.user;
+package com.example.finalproject.service.user;
 
-import com.example.chorvoqgisbackend.models.BaseModel;
-import com.example.chorvoqgisbackend.models.dto.Batch;
-import com.example.chorvoqgisbackend.models.user.Action;
-import com.example.chorvoqgisbackend.repositories.user.ActionRepo;
+import com.example.finalproject.models.BaseModel;
+import com.example.finalproject.models.dto.Batch;
+import com.example.finalproject.models.user.Action;
+import com.example.finalproject.repositories.user.ActionRepo;
 import jakarta.persistence.EntityManager;
 import org.hibernate.Session;
 import org.springframework.beans.factory.annotation.Autowired;

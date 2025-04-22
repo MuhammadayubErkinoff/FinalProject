@@ -1,6 +1,6 @@
-package com.example.chorvoqgisbackend.repositories;
+package com.example.finalproject.repositories;
 
-import com.example.chorvoqgisbackend.models.BaseModel;
+import com.example.finalproject.models.BaseModel;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;

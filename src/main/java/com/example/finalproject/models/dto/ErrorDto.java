@@ -1,4 +1,4 @@
-package com.example.chorvoqgisbackend.models.dto;
+package com.example.finalproject.models.dto;
 
 import lombok.Data;
 
