@@ -9,7 +9,7 @@ services:
     build:
       context: .
     ports:
-      - "2000:8080"
+      - "3000:8080"
     networks:
       - chorvoq_gis_network
       - gis-network
@@ -25,7 +25,7 @@ services:
     container_name: chorvoq_gis_pgadmin
     restart: always
     ports:
-      - "2001:80"
+      - "3001:80"
     networks:
       - gis-network
     environment:
@@ -39,7 +39,7 @@ services:
     restart: always
     image: docker.osgeo.org/geoserver:2.25.4
     ports:
-      - "2002:8080"
+      - "3002:8080"
     networks:
       - gis-network
     volumes:
