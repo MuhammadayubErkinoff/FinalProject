@@ -1,0 +1,13 @@
+package com.example.chorvoqgisbackend.repositories.user;
+
+import com.example.chorvoqgisbackend.models.user.Role;
+import com.example.chorvoqgisbackend.repositories.CustomRepo;
+
+import java.util.Optional;
+
+public interface RoleRepo  extends CustomRepo<Role,Long> {
+
+    Boolean existsByName(String name);
+
+    Optional<Role> findByName(String name);
+}
