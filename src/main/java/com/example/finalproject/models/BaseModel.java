@@ -1,4 +1,4 @@
-package com.example.chorvoqgisbackend.models;
+package com.example.finalproject.models;
 
 import jakarta.persistence.*;
 import lombok.Data;
