@@ -1,7 +1,7 @@
-package com.example.chorvoqgisbackend.repositories.user;
+package com.example.finalproject.repositories.user;
 
-import com.example.chorvoqgisbackend.models.user.Action;
-import com.example.chorvoqgisbackend.repositories.CustomRepo;
+import com.example.finalproject.models.user.Action;
+import com.example.finalproject.repositories.CustomRepo;
 
 import java.util.Optional;
 

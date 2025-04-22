@@ -1,9 +1,9 @@
-package com.example.chorvoqgisbackend.controllers.user;
+package com.example.finalproject.controllers.user;
 
-import com.example.chorvoqgisbackend.models.dto.Batch;
-import com.example.chorvoqgisbackend.models.dto.user.RoleDto;
-import com.example.chorvoqgisbackend.models.user.Role;
-import com.example.chorvoqgisbackend.service.user.RoleService;
+import com.example.finalproject.models.dto.Batch;
+import com.example.finalproject.models.dto.user.RoleDto;
+import com.example.finalproject.models.user.Role;
+import com.example.finalproject.service.user.RoleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

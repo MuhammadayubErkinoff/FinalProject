@@ -1,6 +1,6 @@
-package com.example.chorvoqgisbackend.models.user;
+package com.example.finalproject.models.user;
 
-import com.example.chorvoqgisbackend.models.BaseModel;
+import com.example.finalproject.models.BaseModel;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;

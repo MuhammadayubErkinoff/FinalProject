@@ -1,4 +1,4 @@
-package com.example.chorvoqgisbackend.models.user;
+package com.example.finalproject.models.user;
 
 public enum Gender {
     MALE,FEMALE
